@@ -11,13 +11,20 @@ or in the case of multiple frames
 [InputNumber]: [First Frame Clutch Detected] - [Last Frame Clutch Detected] ([Number of P1 Frames])
 It will also alert on dropped inputs, which is a 1 frame press only when reading P2 inputs.
 
+Set "timeDelay" variable to "true" to only display inputs after the run is over (for RTA attempts).  Or "false" for real-time feedback.
+
 Outstanding issues:
-The perfect start is still detecting as "early" even though the value in memory watch is 0 instead of 170...
-Displays "1.03" as "1.3" whereas "1.30" is correct
+The perfect start is still detecting as "Early" even though the value in memory watch is 0 instead of 170...
+
+Todo:
+Color code inputs based on whether or not they fall in the perfect frame window.
+
+
+
 --]]
 
 --CUSTOMIZE
-timeDelay = false
+timeDelay = true
 
 --Initialize Globals
 shifts = 0
